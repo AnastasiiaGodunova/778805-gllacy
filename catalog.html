@@ -11,14 +11,25 @@
             <img src="img/logo.svg" width="154" height="64" alt="Логотип «Глейси»">
             </a>
             <ul class="site-navigation">
-               <li><a href="#">Каталог</a></li>
-               <li><a href="#">Доставка и оплата</a></li>
-               <li><a href="#">О Компании</a></li>
+               <li><a href="catalog.html">Каталог</a></li>
+               <li><a href="delivery.html">Доставка и оплата</a></li>
+               <li><a href="about-us.html">О Компании</a></li>
             </ul>
             <ul class="user-navigation">
                <li class="search button-navigation"><a href="#">Поиск</a></li>
                <li class="login-link button-navigation"><a href="#">Вход</a></li>
-               <li class="shopping-basket button-navigation"><a href="#">2 товара</a></li>
+               <li class="shopping-basket button-navigation"><a href="#">2 товара</a>
+                  <ul class="basket-list">
+                     <li>
+                        <button class="delete" type="button">Удалить из корзины</button>
+                        <p>Пломбир с апельсиновым джемом 1,5 кг х <span>200 руб.</span> 300 руб.</p></li>
+                     <li>
+                        <button class="delete" type="button">Удалить из корзины</button>
+                        <p>Клубничный пломбир с присыпкой из белого шоколада 1,5 кг х <span>300 руб.</span> 450 руб.</p></li>
+                  </ul>
+                  <p>Итого: 750 руб.</p>
+                  <button type="submit" class="button">Оформить заказ</button>
+               </li>
             </ul>
          </nav>
       </header>
@@ -36,7 +47,7 @@
          <h1 class="page-title">Сливочное мороженое</h1>
          <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <form>
+            <form class="filler" method="get" action="https://echo.htmlacademy.ru">
                <label for="sorting">Сортировка:</label>
                <select name="sorting" id="sorting">
                   <option>по популярности</option>
@@ -46,17 +57,48 @@
                </select>
                <label for="cost">Цена: 100 руб. - 500 руб.</label>
                <input type="range" min="100" max="500" name="cost" id="cost">
-               <p>Жирность:</p>
-               <label><input type="radio" name="fat">0%</label>
-               <label><input type="radio" name="fat">до 10%</label>
-               <label><input type="radio" name="fat">до 30%</label> 
-               <label><input type="radio" name="fat">выше 30%</label>
-               <p>Наполнители:</p>
-               <label><input type="checkbox" name="filler">шоколадные</label> 
-               <label><input type="checkbox" name="filler">сахарные присыпки</label> 
-               <label><input type="checkbox" name="filler">фрукты</label> 
-               <label><input type="checkbox" name="filler">сиропы</label> 
-               <label><input type="checkbox" name="filler">джемы</label> 
+               <fieldset>
+                  <legend>Жирность:</legend>
+                  <ul>
+                     <li class="filter-option">
+                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat" id="no-fat"><label for="no-fat">0%</label>
+                     </li>
+                     <li class="filter-option">
+                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat" id="ten-fat" checked><label for="ten-fat">до 10%</label>
+                     </li>
+                     <li class="filter-option">
+                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat" id="till-30-fat"><label for="till-30-fat">до 30%</label> 
+                     </li>
+                     <li class="filter-option">
+                        <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat" id="untill-30-fat"><label for="untill-30-fat">выше 30%</label>
+                     </li>
+                  </ul>               
+               </fieldset>
+               <fieldset>
+                  <legend>Наполнители:</legend>
+                  <ul>
+                     <li class="filter-option">
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler" id="catalog-category-chocolate" checked>
+                        <label for="catalog-category-chocolate">шоколадные</label> 
+                     </li>
+                     <li class="filter-option">
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler" id="catalog-category-sugar-topping" checked>
+                        <label for="catalog-category-sugar-topping">сахарные присыпки</label>
+                     </li>
+                     <li class="filter-option">
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler" id="catalog-category-fruit">
+                        <label for="catalog-category-fruit">фрукты</label>
+                     </li>
+                     <li class="filter-option">
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler" id="catalog-category-sirup">
+                        <label for="catalog-category-sirup">сиропы</label>
+                     </li>
+                     <li class="filter-option">
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="filler" id="catalog-category-jam">
+                        <label for="catalog-category-jam">джемы</label>
+                     </li>
+                  </ul>
+               </fieldset>
                <input type="submit" name="apply" value="Применить">
             </form>
          </section>
