@@ -9,10 +9,11 @@ body {
   color: #ffffff;
  
   background-color: #849d8f;
-  /*временно
+  /*временно*/
   background-image: url("../img/gllacy-index.jpg");
   background-repeat: no-repeat;
-  background-size: 1200px auto;*/
+  background-position-x: center;
+  background-size: 1200px auto;
 }
 
 .site-navigation {
@@ -425,8 +426,8 @@ textarea {
 
 .main-header {
   width: 1200px;
-  margin: 9px 0;
-  padding-bottom: 230px;
+  margin: 0 auto;
+  padding-top: 9px;
 }
 
 .main-navigation {
@@ -447,18 +448,22 @@ textarea {
 .main-header-logo {
   width: 154px;
   height: 64px;
-  margin-right: 24px;
-  margin-left: 27px;
 }
 
 .site-navigation {
-  width: 349px;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 540px;
   margin: 0;
   padding: 0;
 }
 
 .user-navigation {
-  width: 245px;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 428px;
   margin: 0;
   margin-left: auto;
   padding: 0;
