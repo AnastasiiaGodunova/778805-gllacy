@@ -54,6 +54,7 @@ body {
 	text-decoration: none;
 
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
 }
 
 .site-navigation a,
@@ -142,6 +143,7 @@ a.copyright:active,
 	font-size: 60px;
   line-height: 60px;
   text-align: center;
+  margin-top: 280px;
 }
 
 .visually-hidden {
@@ -474,9 +476,12 @@ textarea {
 }
 
 .mode {
-  width: 167px;
-  margin: 0;
+  width: 180px;
   margin-right: 27px;
+}
+
+.mode p {
+  margin: 0;
 }
 
 .container {
@@ -563,10 +568,11 @@ a.search {
   margin-left: 10px;
 }
 
-.login-link::before {
-content: " ";
-background-image: url("../img/loupe.svg");
+.user-navigation .login-link a::before {
+  content: " ";
+  background-image: url("../img/entrance.svg");
   background-repeat: no-repeat;
+  float: left;
 
 }
 
