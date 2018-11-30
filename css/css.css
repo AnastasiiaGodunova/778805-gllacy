@@ -9,11 +9,6 @@ body {
   color: #ffffff;
  
   background-color: #849d8f;
-  /*временно*/
-  background-image: url("../img/gllacy-index.jpg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-size: 1200px auto;
 }
 
 .site-navigation {
@@ -64,6 +59,8 @@ body {
 .site-navigation a,
 .user-navigation a {
   color: #ffffff;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 13px;
 }
 
 .catalog-navigation a {
@@ -79,6 +76,7 @@ body {
 	color: #333333;
 
 	background-color: #f7f6f3;
+  border-radius: 15px;
 }
 
 .site-navigation a:active {
@@ -345,7 +343,8 @@ address {
   width: 520px;
 	min-height: 220px;
   margin-right: 27px;
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 22px;
 
 	background-color: #f8f7f4;
   border-radius: 10px;
@@ -437,36 +436,41 @@ textarea {
   min-height: 64px;
 }
 
-.contacts {
-  display: flex;
-  justify-content: flex-end;
+.main-header-logo {
+  width: 154px;
+  height: 64px;
+  margin-left: 27px;
 }
 
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
 
   width: 540px;
   min-height: 64px;
   margin: 0;
-  margin-left: 24px;
-  padding: 22px 0;
-  
+  margin-left: 10px;
+  padding: 0;
 }
 
 .user-navigation {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
 
   width: 428px;
   min-height: 33px;
   margin: 0;
   margin-left: auto;
-  padding: 13px 0;
+  margin-right: 27px;
 }
 
-.container {
-  width: 1200px;
+.contacts {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .mode {
@@ -475,10 +479,9 @@ textarea {
   margin-right: 27px;
 }
 
-.main-header-logo {
-  width: 154px;
-  height: 64px;
-  margin-left: 27px;
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .banners {
@@ -487,17 +490,17 @@ textarea {
 }
 
 .banner-item {
-  width: 540px;
+  width: 520px;
   margin-top: 40px;
   margin-bottom: 40px;
-  padding-left: 20px;
+  padding: 0 20px;
   
   border-radius: 15px;
 }
 
 .catalog-list {
   display: flex;
-  justify-content: space-between;
+
 
   width: 267px;
   margin: 0;
