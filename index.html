@@ -9,7 +9,7 @@
    </head>
    <body>
       <header class="main-header">
-         <nav class="main-navigation">
+         <nav class="main-navigation"> 
             <a class="main-header-logo">
             <img src="img/logo.svg" width="154" height="64" alt="Логотип «Глейси»">
             </a>
@@ -55,16 +55,19 @@
                <li class="button-navigation shopping-basket"><a href="basket.html">Пусто</a></li>
             </ul>
          </nav>
+
          <section class="contacts">
             <h2 class="visually-hidden">Режим работы</h2>
-            <p>С 10 до 20 ежедневно<br>
-               <a class="phone" href="tel:88124502525">8 812 450-25-25</a></p>
+            <p class="mode">С 10 до 20 ежедневно<br>
+               <a class="phone" href="tel:88124502525">8 812 450-25-25</a></p>  
          </section>
       </header>
       <main class="container">
          <h1 class="visually-hidden">Глейси - магазин мороженого собственного производства</h1>
          <section class="slider">
-            <ul class="slider-items">
+            <h2 class="slider-title">Крем-брюле и пломбир <br>с малиновым джемом</h2>
+                  <a class="button big-button" href="#">Давайте оба!</a>
+            <!-- <ul class="slider-items">
                <li class="slider-item">
                   <img src="img/slider-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
                   <h2 class="slider-title">Крем-брюле и пломбир <br>с малиновым джемом</h2>
@@ -91,7 +94,7 @@
                <li class="slide-radio">
                   <button class="slide-button"><span class="visually-hidden">Третий слайд</span></button>
                </li>
-            </ul>
+            </ul> -->
          </section>
          <section class="banners">
             <h2 class="visually-hidden">Акции</h2>
@@ -126,33 +129,37 @@
                </li>
                <li class="catalog-item">
                   <a class="catalog-item-image" href="#"><img src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
-                  <p class="catalog-item-cost"><b>415₽</b><span class="catalog-item-weight">/кг</span></p>
+                  <p><b class="catalog-item-cost">415₽</b><span class="catalog-item-weight">/кг</span></p>
                   <h3><a class="catalog-item-title" href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
                </li>
             </ul>
          </section>
          <section class="about-us">
             <h2 class="about-us-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
+            <div class="wrapper-about-us">
             <ul class="about-us-list">
-            <li class="about-us-text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-            <li class="about-us-text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-            <li class="about-us-text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-            <li class="about-us-text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+               <li><p class="about-us-text">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p></li>
+               <li><p class="about-us-text">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p></li>
+               <li><p class="about-us-text">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p></li>
+               <li><p class="about-us-text">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p></li>
             </ul>
+            </div>
          </section>
-         <article class="blog">
-            <h2 class="blog-title">Новое в нашем блоге</h2>
-            <a class="new-article" href="#">10 способов сервировки фруктовых щербетов к столу</a>
-         </article>
-         <section class="sub">
-            <h2 class="visually-hidden">Подписка</h2>
-            <p class="sub-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form class="sub-form" action="https://echo.htmlacademy.ru" method="post"></form>
-               <label for="email-to-sub" class="visually-hidden">Электронная почта</label> 
-                  <input type="email" name="email" id="email-to-sub" placeholder="Электронная почта">
-               
-            <button class="button">Отправить</button>
-         </section>
+         <div class="wrapper">
+            <article class="blog">
+               <h2 class="blog-title">Новое в нашем блоге</h2>
+               <a class="new-article" href="#">10 способов сервировки<br>фруктовых щербетов к<br>столу</a>
+            </article>
+            <section class="sub">
+               <h2 class="visually-hidden">Подписка</h2>
+               <p class="sub-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+               <form class="sub-form" action="https://echo.htmlacademy.ru" method="post">
+                  <label for="email-to-sub" class="visually-hidden">Электронная почта</label> 
+                  <input class="email-to-sub" type="email" name="email" id="email-to-sub" placeholder="Электронная почта">
+                  <button class="button">Отправить</button>
+               </form>
+            </section>
+         </div>
          <section class="find-us">
             <h2 class="visually-hidden">Как нас найти</h2>
             <img src="img/map.jpg" width="1200" height="430" alt="Карта офиса по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
