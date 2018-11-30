@@ -60,7 +60,7 @@ body {
 .user-navigation a {
   color: #ffffff;
   text-decoration-color: rgba(255, 255, 255, 0.2);
-  padding: 10px 13px;
+  padding: 8px 13px;
 }
 
 .catalog-navigation a {
@@ -76,7 +76,7 @@ body {
 	color: #333333;
 
 	background-color: #f7f6f3;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .site-navigation a:active {
@@ -553,9 +553,27 @@ textarea {
   margin-right: 27px;
 }
 
+a.search {
+  background-image: url("../img/loupe.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.user-navigation li {
+  margin-left: 10px;
+}
+
+.login-link::before {
+content: " ";
+background-image: url("../img/loupe.svg");
+  background-repeat: no-repeat;
+
+}
+
 .catalog-navigation,
 .modal-login,
 .catalog-item-cost,
-.catalog-item-weight {
+.catalog-item-weight,
+#search {
   display: none;
 }
