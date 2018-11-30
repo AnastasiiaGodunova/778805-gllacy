@@ -432,11 +432,41 @@ textarea {
 
 .main-navigation {
   display: flex;
+
+  width: 100%;
+  min-height: 64px;
 }
 
 .contacts {
   display: flex;
   justify-content: flex-end;
+}
+
+.site-navigation {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 540px;
+  min-height: 64px;
+  margin: 0;
+  margin-left: 24px;
+  padding: 22px 0;
+  
+}
+
+.user-navigation {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 428px;
+  min-height: 33px;
+  margin: 0;
+  margin-left: auto;
+  padding: 13px 0;
+}
+
+.container {
+  width: 1200px;
 }
 
 .mode {
@@ -448,29 +478,7 @@ textarea {
 .main-header-logo {
   width: 154px;
   height: 64px;
-}
-
-.site-navigation {
-  display: flex;
-  flex-wrap: wrap;
-
-  width: 540px;
-  margin: 0;
-  padding: 0;
-}
-
-.user-navigation {
-  display: flex;
-  flex-wrap: wrap;
-
-  width: 428px;
-  margin: 0;
-  margin-left: auto;
-  padding: 0;
-}
-
-.container {
-  width: 1200px;
+  margin-left: 27px;
 }
 
 .banners {
