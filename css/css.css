@@ -62,7 +62,7 @@ body {
 }
 
 .shopping-basket a {
-  width: 74px;
+  min-width: 85px;
 }
 
 a.search {
@@ -360,6 +360,21 @@ a.copyright:active,
 	background-color: #f8f7f4;
 }
 
+.feedback-contacts {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 252px;
+  min-height: 250px;
+  border-radius: 20px;
+  padding: 27px 25px;
+}
+
+.feedback-button {
+  width: 230px;
+  padding: 10px;
+}
+
 .feedback-form-title {
 	font-size: 24px;
   line-height: 28px;
@@ -379,6 +394,7 @@ address {
   line-height: 24px;
   color: #323232;
   font-style: normal;
+  padding-bottom: 19px;
 }
 
 .feedback-phone {
@@ -386,6 +402,8 @@ address {
   line-height: 22px;
   color: #323232;
   text-decoration: none;
+  padding-top: 5px;
+  padding-bottom: 4px;
 }
 
 .feedback-text {
@@ -400,7 +418,7 @@ address {
   line-height: 18px;
   font-weight: 400;
   color: inherit;
-  text-decoration: none;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-copyright a,
@@ -409,6 +427,7 @@ address {
   line-height: 18px;
   font-weight: 400;
   color: #fefefe;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 .raspberries-free {
 	min-height: 229px;
@@ -448,7 +467,7 @@ address {
 
 .blog {
   width: 540px;
-  min-height: 215px;
+  min-height: 220px;
   margin-left: 27px;
   padding-top: 5px;
   padding-left: 20px;
@@ -456,6 +475,8 @@ address {
   background-color: #ffffff;
   background-image: url("../img/blog.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 15px;
 }
 
@@ -468,7 +489,7 @@ address {
   padding-top: 13px;
 
 	background-color: #f8f7f4;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 .sub-text {
@@ -685,32 +706,96 @@ textarea {
 .main-footer {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 
   width: 1200px;
 }
 
 .social-list {
+  display: flex;
   width: 147px;
   margin: 0;
-  margin-left: 31px;
+  margin-left: 28px;
   padding: 0;
+  margin-top: 30px;
 }
 
 .documents-list {
-  width: 326px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 350px;
+  height: 50px;
   margin: 0;
   padding: 0;
+  margin-top: 25px;
+  margin-left: 90px;
 }
 
 .footer-copyright {
-  width: 190px;
-  margin-right: 27px;
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  margin: 0;
+  margin-top: 13px;
+  margin-right: 7px;
 }
 
+.social-button {
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  width: 32px;
+  height: 32px;
+  margin-right: 11px;
+}
+
+a.social-button-tvit {
+  display: block;
+  background-image: url("../img/twitter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+a.social-button-insta {
+  display: block;
+  background-image: url("../img/instagram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+a.social-button-fb {
+  display: block;
+  background-image: url("../img/fb.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+a.social-button-vk {
+  display: block;
+  background-image: url("../img/vk.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+ 
+.breadcrumbs a {
+text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumbs {
+  display: flex;
+  
+
+}
+
+.feedback-contacts,
 .catalog-navigation,
-.modal-login,
 .catalog-item-cost,
 .catalog-item-weight,
-#search {
+#search,
+.modal,
+.basket-list {
   display: none;
-} blog
+}
