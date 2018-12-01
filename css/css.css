@@ -20,9 +20,7 @@ body {
   color: #ffffff;
   text-decoration-color: rgba(255, 255, 255, 0.2);
 
-  padding: 8px 13px;
-
-  border-radius: 20px;
+  padding: 6px 13px;
 }
 
 .site-navigation a:hover,
@@ -191,10 +189,7 @@ a.new-article:active,
 .documents-list a:active,
 a.copyright:hover,
 a.copyright:focus,
-a.copyright:active,
-.pagination-item a:hover,
-.pagination-item a:focus
-.pagination-item a:active {
+a.copyright:active {
   color: #e84d37;
 }
 
@@ -542,11 +537,14 @@ address {
   line-height: 16px;
   font-weight: 400;
   color: #ffffff;
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .page-title {
 	font-size: 35px;
   line-height: 41px;
+  margin: 0;
+  margin-left: 27px;
 }
 
 .sorting-name {
@@ -678,6 +676,7 @@ textarea {
 .catalog-item {
   width: 267px;
   margin-left: 26px;
+  margin-bottom: 30px;
 }
 
 .about-us-list {
@@ -699,8 +698,10 @@ textarea {
 }
 
 .about-us-item {
-  width: 476px;
-  padding-right: 33px;
+  width: 550px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .main-footer {
@@ -779,15 +780,87 @@ a.social-button-vk {
   background-position: center;
   border-radius: 50%;
 }
- 
-.breadcrumbs a {
-text-decoration-color: rgba(255, 255, 255, 0.2);
+
+fieldset {
+  border: none;
+}
+
+.provider-footer-documents:before {
+  background-image: url("../img/heart.svg");
+  content: " ";
+  display: block;
+  width: 15px;
+  height: 13px;
+  background-repeat: no-repeat;
+}
+
+.about-us-eco:before {
+  background-image: url("../img/eco.svg");
+  content: " ";
+  display: block;
+  width: 49px;
+  height: 49px;
+}
+
+.about-us-cow:before {
+  background-image: url("../img/cow.svg");
+  content: " ";
+  display: block;
+  width: 49px;
+  height: 49px;
+}
+
+.about-us-thermometer:before {
+  background-image: url("../img/thermometer.svg");
+  content: " ";
+  display: block;
+  width: 49px;
+  height: 49px;
+}
+
+.about-us-ice-cream:before {
+  background-image: url("../img/ice-cream.svg");
+  content: " ";
+  display: block;
+  width: 49px;
+  height: 49px;
+}
+
+.provider-footer-documents {
+  display: flex;
+  justify-content: space-around;
 }
 
 .breadcrumbs {
   display: flex;
-  
+  margin: 0;
+  margin-left: 27px;
+  margin-top: 23px;
+  padding: 0;
+}
 
+.breadcrumbs-current {
+  margin-top: 4px;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-item,
+.pagination-item-current {
+  padding-right: 20px;
+}
+
+.pagination-item a:active  {
+  color: #323232;
+}
+
+.site-navigation-currant {
+  background-color: #d07058;
+  border-radius: 20px;
+  text-decoration: none;
 }
 
 .feedback-contacts,

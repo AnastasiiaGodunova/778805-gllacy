@@ -14,7 +14,7 @@
             <img src="img/logo.svg" width="154" height="64" alt="Логотип «Глейси»">
             </a>
             <ul class="site-navigation">
-               <li><a href="catalog.html">Каталог</a>
+               <li><a class="site-navigation-currant" href="catalog.html">Каталог</a>
                   <ul class="catalog-navigation">
                      <li><a href="new.html"><b>Новинки</b></a></li>
                      <li><a href="creamy.html">Сливочное</a></li>
@@ -109,18 +109,22 @@
                </li>
             </ul>
          </nav>
-         <section class="contacts">
-            <h2 class="visually-hidden">Режим работы</h2>
-            <p>С 10 до 20 ежедневно<br>
-               <a class="phone" href="tel:88124502525">8 812 450-25-25</a></p>
-         </section>
+         <div class="wrapper">
+            <ul class="breadcrumbs">
+               <li><a href="index.html">Главная</a> &raquo; </li>
+               <li><a href="catalog.html">Каталог</a> &raquo; </li>
+               <li class="breadcrumbs-current">Сливочное</li>
+            </ul>
+            <section class="contacts">
+               <h2 class="visually-hidden">Режим работы</h2>
+               <div class="mode">
+                  <p>С 10 до 20 ежедневно</p>
+                  <a class="phone" href="tel:88124502525">8 812 450-25-25</a>
+               </div>
+            </section>
+         </div>
       </header>
       <main class="container">
-         <ul class="breadcrumbs">
-            <li><a href="index.html">Главная</a> &raquo; </li>
-            <li><a href="catalog.html">Каталог</a> &raquo; </li>
-            <li class="breadcrumbs-current">Сливочное</li>
-         </ul>
          <h1 class="page-title">Сливочное мороженое</h1>
          <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -283,7 +287,7 @@
          <p class="footer-copyright">
             <a href="https://htmlacademy.ru/intensive/htmlcss">
                <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
-            <span>Сделано в </span><a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a><span> © 2017</span>
+            <span>Сделано в <a class="copyright" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</span>
          </p>
       </footer>
    </body>
