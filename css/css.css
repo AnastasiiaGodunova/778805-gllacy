@@ -41,30 +41,81 @@ body {
 }
 
 .user-navigation a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
   font-weight: 500;
   text-decoration: none;
   color: #ffffff;
+  
 
-  padding: 8px 13px;
-
-  border-radius: 20px;
-}
-
-.user-navigation li {
   margin-left: 10px;
-  padding: 8px 13px;
+  padding: 7px 13px;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
 
+.login-link a {
+  width: 67px;
+}
+
+.shopping-basket a {
+  width: 74px;
+}
+
+a.search {
+  width: 21px;
+  height: 19px;
+  padding: 7px 7px;
+  background-image: url("../img/loupe.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+}
+
+a.search:hover,
+a.search:focus,
+a.search:active {
+  background-image: url("../img/loupe-black.svg");
+}
+
+.login-link a:before {
+  content: " ";
+  display: block;
+  width: 21px;
+  height: 19px;
+  background-image: url("../img/entrance.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.login-link a:hover:before,
+.login-link a:focus:before,
+.login-link a:active:before {
+  background-image: url("../img/entrance-black.svg");
+}
+
+.shopping-basket a:before {
+  content: " ";
+  display: block;
+  width: 21px;
+  height: 19px;
+  background-image: url("../img/basket.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.shopping-basket a:hover:before,
+.shopping-basket a:focus:before {
+  background-image: url("../img/basket-black.svg");
+}
+
 .user-navigation a:focus,
 .user-navigation a:hover {
   color: #323232;
-}
 
-.user-navigation li:focus,
-.user-navigation li:hover {
   background-color: #f8f7f4;
 }
 
@@ -154,13 +205,6 @@ a.copyright:active,
 	background-color: #f8f7f4;
 }
 
-.slider-title {
-	font-size: 60px;
-  line-height: 60px;
-  text-align: center;
-  margin-top: 280px;
-}
-
 .visually-hidden {
 	position: absolute;
 	clip: rect(0 0 0 0);
@@ -170,14 +214,32 @@ a.copyright:active,
 	margin: -1px;
 }
 
+.slider-title {
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 26px;
+  margin-top: 280px;
+}
+
+.btn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
 .button {
 	font-size: 18px;
   line-height: 24px;
 	font-family: "Roboto", Arial, sans-serif;
 	color: #ffffff;
 	text-decoration: none;
+  text-align: center;
 
-  padding: 12px 21px;
 
 	background: linear-gradient(to top, #e74a35, #f26843);
 	box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
@@ -187,17 +249,40 @@ a.copyright:active,
 .big-button {
 	font-size: 32px;
   line-height: 44px;
+  text-align: center;
 
-  padding: 13px 40px;
+  padding: 12px 0;
+
+  width: 280px;
 
   border-radius: 50px;
 }
 
+.button-banner-raspberries {
+  width: 165px;
+  padding: 12px 0;
+  align-self: flex-end;
+  margin-top: 26px;
+}
+
+.button-banner-chocolate {
+  width: 189px;
+  padding: 12px 0;
+  align-self: flex-end;
+  margin-top: 26px;
+}
+
 .button:hover,
 .button:focus {
-	background: linear-gradient(to top, #e74a35, #f26843), 
-	            linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+              linear-gradient(to top, #e74a35, #f26843);
 	box-shadow: 0px 2px 2px 0 #ac1000;
+}
+
+.button:active {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+                    linear-gradient(to bottom, #e74a35, #f26843);
+  box-shadow: inset 0px 2px 2px 0 #942718;
 }
 
 .banner-title {
@@ -209,7 +294,12 @@ a.copyright:active,
 .banner-text {
 	font-size: 18px;
   line-height: 22px;
-  margin: 16px 0;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.catalog-item img {
+  border-radius: 100%;
 }
 
 .catalog-item-title {
@@ -218,6 +308,9 @@ a.copyright:active,
   line-height: 22px;
   font-weight: 500;
 	color: #ffffff;
+  text-align: center;
+
+  margin: 0;
 }
 
 .catalog-item-cost {
@@ -231,6 +324,8 @@ a.copyright:active,
 }
 
 .about-us-title {
+  font-size: 24px;
+  line-height: 30px;
   font-weight: 500;
   color: #323232;  
 }
@@ -239,23 +334,23 @@ a.copyright:active,
 	font-weight: 400;
   color: #323232;
   width: 476px;
+  
+  margin: 0;
 }
 
 .blog-title {
 	font: inherit;
   font-weight: 500;
   color: #323232;
+
+  margin-bottom: 4px;
+  margin-top: 17px;
 }
 
 .new-article {
 	font-size: 24px;
   line-height: 30px;
   color: #323232;
-}
-
-.sub-text {
-	font-weight: 400;
-	color: #5a5a5a;	
 }
 
 .modal-feedback-form {
@@ -353,7 +448,7 @@ address {
 
 .blog {
   width: 540px;
-  min-height: 220px;
+  min-height: 215px;
   margin-left: 27px;
   padding-top: 5px;
   padding-left: 20px;
@@ -366,21 +461,34 @@ address {
 
 .sub {
   width: 520px;
-	min-height: 220px;
+	min-height: 210px;
   margin-right: 27px;
   padding-left: 20px;
   padding-right: 22px;
+  padding-top: 13px;
 
 	background-color: #f8f7f4;
   border-radius: 10px;
 }
 
+.sub-text {
+  font-weight: 400;
+  color: #5a5a5a; 
+}
+
 .email-to-sub {
-  width: 368px;
-  height: 44px;
+  width: 353px;
+  height: 41px;
   padding-left: 15px;
+  margin-top: 20px;
 
   border-radius: 5px;
+}
+
+.sub-button {
+  width: 129px;
+  height: 44px;
+  margin-left: 10px;
 }
 
 .basket-list {
@@ -512,12 +620,21 @@ textarea {
   margin: 0 auto;
 }
 
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .banners {
   display: flex;
   justify-content: space-between;
 }
 
 .banner-item {
+  display: flex;
+  flex-direction: column;
+
   width: 520px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -526,25 +643,25 @@ textarea {
   border-radius: 15px;
 }
 
+.catalog {
+  width: 1200;
+}
+
 .catalog-list {
- display: flex;
+  display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
 
-.about-us-list {
-  margin: 0;
-  padding: 0;
-}
-
-.catalog {
-   width: 1200;
-}
-
 .catalog-item {
   width: 267px;
   margin-left: 26px;
+}
+
+.about-us-list {
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
@@ -554,8 +671,15 @@ textarea {
   margin-bottom: 40px;
 }
 
-.wrapper-about-us {
+.about-us-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-us-item {
+  width: 476px;
+  padding-right: 33px;
 }
 
 .main-footer {
@@ -583,38 +707,10 @@ textarea {
   margin-right: 27px;
 }
 
-a.search {
-  background-image: url("../img/loupe.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 100%;
-
-}
-
-.login-link a:before {
-  content: " ";
-  display: block;
-  width: 21px;
-  height: 19px;
-  background-image: url("../img/entrance.svg");
-  background-repeat: no-repeat;
-  background-position: left;
-}
-
-.shopping-basket a:before {
-  content: " ";
-  display: block;
-  width: 21px;
-  height: 19px;
-  background-image: url("../img/basket.svg");
-  background-repeat: no-repeat;
-  background-position: left;
-}
-
 .catalog-navigation,
 .modal-login,
 .catalog-item-cost,
 .catalog-item-weight,
 #search {
   display: none;
-}
+} blog
