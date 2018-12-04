@@ -163,20 +163,6 @@ hr {
   line-height: 16px;
 }
 
-.search {
-  position: relative;
-}
-
-.search-form {
-  position: absolute;
-
-  display: none;
-}
-
-.user-navigation > li:hover .search-form {
-  display: block;
-}
-
 a.search {
   width: 21px;
   height: 19px;
@@ -333,7 +319,8 @@ a.user-help-item {
 }
 
 .slider-item,
-.slide-switches {
+.slide-switches,
+.filter-options {
   list-style: none;
 }
 
@@ -355,19 +342,12 @@ a.copyright:active {
   color: #e84d37;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
 	position: absolute;
-	
+	clip: rect(0 0 0 0);
 	width: 1px;
 	height: 1px;
 	margin: -1px;
-  padding: 0;
-
-  border: 0;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .slider-title {
@@ -478,8 +458,6 @@ a.copyright:active {
 }
 
 .catalog-item {
-  position: relative;
-
   width: 267px;
   margin-bottom: 30px;
   margin-left: 26px;
@@ -515,18 +493,6 @@ a.copyright:active {
   color: #ffffff; 
 }
 
-a.popup {
-  display: none;
-
-  width: 200px;
-  min-height: 44px;
-  margin: 11px 46px;
-}
-
-.catalog-item:hover .popup {
-  display: block;
-}
-
 .about-us {
   display: flex;
   flex-direction: column;
@@ -550,7 +516,6 @@ a.popup {
   line-height: 30px;
   color: #323232;  
 }
-
 .about-us-list {
   display: flex;
   flex-wrap: wrap;
@@ -759,17 +724,11 @@ address {
   color: #323232;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .main-footer {
   display: flex;
   justify-content: space-between;
   width: 1200px;
   margin: 0 auto;
-  margin-bottom: 30px;
 }
 
 .social-list {
@@ -969,12 +928,6 @@ a.social-button-vk:active {
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
-.filter {
-  display: flex;
-  flex-wrap: wrap;
-  width: 1200px;
-}
-
 fieldset {
   border: none;
 }
@@ -983,49 +936,6 @@ fieldset {
   font-weight: 500;
 	font-size: 14px;
   line-height: 16px;
-}
-
-.filter-sorting {
-  width: 194px;
-}
-
-.filter-cost {
-  width: 220px;
-}
-
-.filter-fat {
-  width: 415px; 
-}
-
-.filter-filler {
-  width: 703px;
-}
-
-.filter-options {
-  display: flex;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.filter-options li {
-  margin-left: 14px;
-}
-
-.filter-submit {
-  width: 144px;
-  height: 34px;
-  padding: 0;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  color: #ffffff;
-
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid #ffffff;
-  border-radius: 30px;
 }
 
 .pagination-list {
@@ -1075,6 +985,7 @@ fieldset {
 .feedback-contacts,
 .catalog-item-cost,
 .catalog-item-weight,
+#search,
 .modal,
 .basket-list {
   display: none;
