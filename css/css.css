@@ -306,6 +306,7 @@ a.user-help-item {
 .user-navigation,
 .slider-item,
 .slide-switches,
+<<<<<<< HEAD
 .catalog-list,
 .about-us-list,
 .social-list,
@@ -313,6 +314,9 @@ a.user-help-item {
 .breadcrumbs,
 .filter-options,
 .pagination-list {
+=======
+.filter-options {
+>>>>>>> parent of 5e88bed... Бонусное задание макросетка
   list-style: none;
 }
 
@@ -903,6 +907,7 @@ fieldset {
 .pagination-list {
   display: flex;
   justify-content: flex-end;
+<<<<<<< HEAD
 }
 
 .pagination-item a {
@@ -920,6 +925,8 @@ fieldset {
 .pagination-item a:hover,
 .pagination-item a:focus  {
   padding: 3px 8px;
+=======
+>>>>>>> parent of 5e88bed... Бонусное задание макросетка
 
   background-color: rgba(255, 255, 255, 0.2);;
   border-radius: 50%;
