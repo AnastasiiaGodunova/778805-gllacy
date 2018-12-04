@@ -16,7 +16,7 @@
             <ul class="site-navigation">
                <li><a class="site-navigation-currant" href="catalog.html">Каталог</a>
                   <ul class="catalog-navigation">
-                     <li><a href="new.html"><b>Новинки</b></a></li>
+                     <li><a href="new.html"><b>Новинки</b></a></li><hr>
                      <li><a href="creamy.html">Сливочное</a></li>
                      <li><a href="sherbet.html">Щербеты</a></li>
                      <li><a href="fruit-ice.html">Фруктовый лед</a></li>
@@ -128,22 +128,21 @@
          <h1 class="page-title">Сливочное мороженое</h1>
          <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
-<<<<<<< HEAD
-            <form class="filler" action="https://echo.htmlacademy.ru" method="get">
-=======
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
->>>>>>> parent of 5e88bed... Бонусное задание макросетка
-               <label for="sorting" class="sorting-name">Сортировка:</label>
-               <select name="sorting" id="sorting">
-                  <option>по популярности</option>
-                  <option>сначала недорогие</option>
-                  <option>сначала дорогие</option>
-                  <option>по жирности</option>
-               </select>
-               <label class="sorting-name">Цена: 100 руб. - 500 руб.
-                  <input type="range" name="cost" min="100" max="500">
-               </label>
-               <fieldset>
+               <fieldset class="filter-sorting">
+                  <legend class="sorting-name"><label for="sorting">Сортировка:</label></legend>
+                  <select name="sorting" id="sorting">
+                     <option>по популярности</option>
+                     <option>сначала недорогие</option>
+                     <option>сначала дорогие</option>
+                     <option>по жирности</option>
+                  </select>
+               </fieldset>
+               <fieldset class="filter-cost">
+                  <legend class="sorting-name"><label for="range-cost">Цена: 100 руб. - 500 руб.</label></legend>
+                  <input type="range" name="cost" id="range-cost" min="100" max="500">
+               </fieldset>
+               <fieldset class="filter-fat">
                   <legend class="sorting-name">Жирность:</legend>
                   <ul class="filter-options">
                      <li class="filter-option">
@@ -168,7 +167,7 @@
                      </li>
                   </ul>               
                </fieldset>
-               <fieldset>
+               <fieldset class="filter-filler">
                   <legend class="sorting-name">Наполнители:</legend>
                   <ul class="filter-options">
                      <li class="filter-option">
