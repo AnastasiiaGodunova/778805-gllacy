@@ -32,7 +32,7 @@
                      <h2 class="visually-hidden">Форма поиска</h2>
                      <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                         <label for="search" class="visually-hidden">Строка поиска</label>
-                        <input type="search" name="search" id="search" placeholder="Что ищем?">
+                        <input type="search" class="input-search" name="search" id="search" placeholder="Что ищем?">
                      </form>
                   </section>
                </li>
@@ -44,7 +44,7 @@
                            <input type="email" name="email" id="user-email" placeholder="Электронная почта">
                            <label for="user-password" class="visually-hidden">Пароль</label>
                            <input type="password" name="password" id="user-password" placeholder="Пароль">
-                           <button class="button" type="submit">Войти</button>
+                           <button class="button btn login-link-btn" type="submit">Войти</button>
                            <div class="user-help">
                               <a class="user-help-item" href="restore.html">Забыли пароль?</a>
                               <a class="user-help-item" href="new-user.html">Новая регистрация</a>
@@ -162,7 +162,7 @@
          </div>
          <section class="find-us">
             <h2 class="visually-hidden">Как нас найти</h2>
-            <img src="img/map.jpg" width="1200" height="430" alt="Карта офиса по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            <img src="img/map.jpg" class="find-us-map" width="1200" height="430" alt="Карта офиса по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
             <div class="feedback-contacts">
                <span class="feedback-text-mini">Адрес главного офиса <br>и офлайн-магазина:</span>
                <address>ул. Большая Конюшенная <br>19/8, Санкт-Петербург</address>
@@ -171,9 +171,10 @@
                <span class="feedback-text">(с 10 до 20 ежедневно)</span><br>
                <a class="button btn feedback-button" href="feedback-form.html">Форма обратной связи</a>
             </div>
+            <div class="map-pin"></div>
             <section class="modal modal-feedback-form">
                <h2 class="feedback-form-title">Мы обязательно вам ответим!</h2>
-               <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span>x</button>
+               <button class="modal-close btn" type="button"><span class="visually-hidden">Закрыть</span></button>
                <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
                   <label for="feedback-name" class="visually-hidden">Имя</label>
                   <input type="text" name="name" id="feedback-name" placeholder="Как вас зовут?">
@@ -181,7 +182,7 @@
                   <input type="email" name="email" id="feedback-email" placeholder="Ваша почта для ответа?"> 
                   <label for="user-feedback" class="visually-hidden">Сообщение или вопрос</label>
                   <textarea name="comments" id="user-feedback" placeholder="Напишите что-нибудь..."></textarea>
-                  <button class="button btn" type="submit">Отправить</button>
+                  <button class="button btn feedback-form-button" type="submit">Отправить</button>
                </form>
             </section>            
          </section>
