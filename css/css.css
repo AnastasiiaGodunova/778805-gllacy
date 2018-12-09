@@ -125,6 +125,7 @@ body {
   width: 428px;
   min-height: 33px;
   margin: 0;
+
   margin-right: 27px;
   margin-left: auto;
 
@@ -196,7 +197,7 @@ body {
 a.search {
   width: 21px;
   height: 19px;
-  padding: 7px 7px;
+  padding: 5px 5px;
 
   background-image: url("../img/loupe.svg");
   background-repeat: no-repeat;
@@ -335,7 +336,7 @@ a.user-help-item {
 }
 
 .shopping-basket a {
-  min-width: 85px;
+  min-width: 72px;
 }
 
 .shopping-basket a:before {
@@ -378,12 +379,13 @@ a.user-help-item {
 .basket-list {
   position: absolute;
   top: 62px;
-  right: 95px;
+  right: 100px;
 
-  display: none;
-  width: 510px;
-  min-height: 200px;
-  padding: 16px 16px;
+  
+  width: 519px;
+  min-height: 220px;
+  padding-top: 13px;
+  padding-left: 18px;
 
   font-weight: 400;
   font-size: 13px;
@@ -400,6 +402,10 @@ a.user-help-item {
   height: 11px;
 
   background-image: url("../img/cross-small.svg");
+}
+
+.item-name {
+  width: 225px;
 }
 
 .cost-a-kilo {
@@ -588,15 +594,27 @@ a.copyright:active {
   margin-left: 26px;
 }
 
-.catalog-item:hover {
+.catalog-item:hover:before {
+  content: " ";
+
+  position: absolute;
+  top: -7px;
+  right: -13px;
+  bottom: -81px;
+  left: -13px;
+  z-index: 3;
+
+  display: block;
+
   background-color: rgba(248,247,244, 0.2);
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.catalog-item-hit:before {
+.catalog-item-hit:after {
   content: " ";
 
   position: absolute;
+  top: 1px;
 
   width: 61px;
   height: 61px;
@@ -604,6 +622,7 @@ a.copyright:active {
   background-image: url("../img/hit.svg");
   background-repeat: no-repeat;
 }
+
 
 .catalog-item img,
 .basket-table img {
@@ -618,6 +637,17 @@ a.copyright:active {
   line-height: 1;
 
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+}
+
+.catalog-item-cost:after {
+  content: " ";
+
+  display: inline-block;
+  width: 31px;
+  height: 36px;
+
+  background-image: url("../img/ruble.svg");
+  background-repeat: no-repeat;
 }
 
 .catalog-item-weight {
@@ -651,6 +681,9 @@ a.copyright:active {
 }
 
 .catalog-item:hover .popup {
+  position: absolute;
+  z-index: 4;
+
   display: block;
 }
 
@@ -932,11 +965,6 @@ address {
   height: 140px;
 
   background-image: url("../img/pin.svg");
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 .main-footer {
