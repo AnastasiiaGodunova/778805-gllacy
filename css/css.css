@@ -88,9 +88,9 @@ body {
   left: -6px;
 
   display: none;
-  width: 143px;
+  width: 103px;
   min-height: 161px;
-  padding: 5px 0;
+  padding: 5px 20px;
 
   list-style: none;
 
@@ -101,15 +101,11 @@ body {
 
 .catalog-navigation a {
   display: block;
-  padding: 6px 20px;
+  padding: 6px 0px;
 
   font-weight: 400;
   color: #323232;
   text-decoration: none;
-}
-
-hr {
-  width: 128px;
 }
 
 .catalog-navigation a:hover,
@@ -150,8 +146,8 @@ hr {
   border-radius: 20px;
 }
 
-.user-navigation a:hover,
-.user-navigation a:focus {
+.user-navigation > a:hover,
+.user-navigation > a:focus {
   color: #323232;
 
   background-color: #f8f7f4;
@@ -192,7 +188,8 @@ hr {
 }
 
 .user-navigation > li:hover .search-form,
-.user-navigation > li:hover .login-form {
+.user-navigation > li:hover .login-form,
+.user-navigation > li:hover .basket-list {
   display: block;
 }
 
@@ -286,6 +283,8 @@ textarea:hover {
 }
 
 .button {
+  padding: 12px 0;
+
   font-size: 18px;
   line-height: 24px;
   font-family: "Roboto", Arial, sans-serif;
@@ -355,9 +354,36 @@ a.user-help-item {
   background-image: url("../img/basket-black.svg");
 }
 
+.shopping-basket-red > a {
+  position: relative;
+
+  color: #323232;
+
+  background-color: #f8f7f4;
+}
+
+.shopping-basket-red > a:before,
+.shopping-basket-red > a:hover:before,
+.shopping-basket-red > a:focus:before  {  
+  content: " ";
+
+  width: 21px;
+  height: 19px;
+
+  background-image: url("../img/basket-red.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
 .basket-list {
-  width: 540px;
-  height: 242px;
+  position: absolute;
+  top: 62px;
+  right: 95px;
+
+  display: none;
+  width: 510px;
+  min-height: 200px;
+  padding: 16px 16px;
 
   font-weight: 400;
   font-size: 13px;
@@ -365,7 +391,16 @@ a.user-help-item {
   color: #323232;
 
   background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 } 
+
+.modal-delete {
+  width: 11px;
+  height: 11px;
+
+  background-image: url("../img/cross-small.svg");
+}
 
 .cost-a-kilo {
   color: #999999;
@@ -375,6 +410,10 @@ a.user-help-item {
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
+}
+
+.btn-basket {
+  color: #ffffff;
 }
 
 .contacts {
@@ -411,9 +450,9 @@ a.user-help-item:active,
 a.new-article:hover,
 a.new-article:focus,
 a.new-article:active,
-.catalog-item a:hover,
-.catalog-item a:focus,
-.catalog-item a:active,
+.catalog-item-title:hover,
+.catalog-item-title:focus,
+.catalog-item-title:active,
 .documents-list a:hover,
 .documents-list a:focus,
 .documents-list a:active,
@@ -460,11 +499,9 @@ a.copyright:active {
 
 .big-button {
   width: 280px;
-  padding: 12px 0;
 
   font-size: 32px;
   line-height: 44px;
-  text-align: center;
 
   border-radius: 50px;
 }
@@ -513,7 +550,6 @@ a.copyright:active {
   align-self: flex-end;
   width: 165px;
   margin-top: 26px;
-  padding: 12px 0;
 }
 
 .chocolate-free {
@@ -529,7 +565,6 @@ a.copyright:active {
   align-self: flex-end;
   width: 189px;
   margin-top: 26px;
-  padding: 12px 0;  
 }
 
 .catalog {
@@ -558,18 +593,42 @@ a.copyright:active {
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.catalog-item img {
+.catalog-item-hit:before {
+  content: " ";
+
+  position: absolute;
+
+  width: 61px;
+  height: 61px;
+
+  background-image: url("../img/hit.svg");
+  background-repeat: no-repeat;
+}
+
+.catalog-item img,
+.basket-table img {
   border-radius: 100%;
 }
 
 .catalog-item-cost {
+  position: absolute;
+  bottom: 80px;
+
   font-size: 45px;
-  line-height: 45px;
+  line-height: 1;
+
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 }
 
 .catalog-item-weight {
+  position: absolute;
+  bottom: 75px;
+  left: 110px;
+
   font-size: 30px;
   line-height: 45px;
+
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 }
 
 .catalog-item-title {
@@ -583,12 +642,12 @@ a.copyright:active {
   color: #ffffff; 
 }
 
-a.popup {
+.popup {
   display: none;
 
   width: 200px;
-  min-height: 44px;
-  margin: 11px 46px;
+  margin: 0 auto;
+  padding: 12px 0;
 }
 
 .catalog-item:hover .popup {
@@ -1201,10 +1260,4 @@ fieldset {
 
 .disabled {
   opacity: 0.2;
-}
-
-.catalog-item-cost,
-.catalog-item-weight,
-.basket-list {
-  display: none;
 }
