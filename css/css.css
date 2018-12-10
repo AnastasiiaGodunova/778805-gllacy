@@ -825,7 +825,7 @@ a.copyright:active {
 
 .blog {
   width: 540px;
-  height: 215px;
+  min-height: 215px;
   margin-left: 27px;
   padding-top: 5px;
   padding-left: 20px;
@@ -853,10 +853,18 @@ a.copyright:active {
   color: #323232;
 }
 
-.sub {
-  width: 520px;
+.sub-wrapper {
+  width: 560px;
   min-height: 210px;
   margin-right: 27px;
+
+  background: url("../img/bg-post.svg") no-repeat;
+}
+
+.sub {
+  width: 507px;
+  min-height: 197px;
+  margin: 4px 5px;
   padding-top: 13px;
   padding-right: 22px;
   padding-left: 20px;
@@ -871,16 +879,15 @@ a.copyright:active {
 }
 
 .email-to-sub {
-  width: 338px;
+  width: 337px;
   margin-top: 20px;
 
   border-radius: 5px;
 }
 
 .sub-button {
-  width: 129px;
-  height: 44px;
-  margin-left: 10px;
+  width: 126px;
+  margin-left: 8px;
 }
 
 .find-us {
