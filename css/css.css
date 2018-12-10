@@ -147,8 +147,8 @@ body {
   border-radius: 20px;
 }
 
-.user-navigation > a:hover,
-.user-navigation > a:focus {
+.button-navigation > a:hover,
+.button-navigation > a:focus {
   color: #323232;
 
   background-color: #f8f7f4;
@@ -284,7 +284,7 @@ textarea:hover {
 }
 
 .button {
-  padding: 12px 0;
+  padding: 11px 0;
 
   font-size: 18px;
   line-height: 24px;
@@ -358,6 +358,8 @@ a.user-help-item {
 .shopping-basket-red > a {
   position: relative;
 
+  width: 92px;
+
   color: #323232;
 
   background-color: #f8f7f4;
@@ -380,12 +382,10 @@ a.user-help-item {
   position: absolute;
   top: 62px;
   right: 100px;
-
   
-  width: 519px;
+  width: 500px;
   min-height: 220px;
-  padding-top: 13px;
-  padding-left: 18px;
+  padding: 13px 18px;
 
   font-weight: 400;
   font-size: 13px;
@@ -413,13 +413,20 @@ a.user-help-item {
 }
 
 .total-sum {
+  position: absolute;
+  right: 15px;
+  margin-top: 7px; 
+
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
 }
 
 .btn-basket {
-  color: #ffffff;
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  width: 170px;
 }
 
 .contacts {
@@ -436,6 +443,7 @@ a.user-help-item {
 
 .mode p {
   margin: 0;
+  margin-bottom: 5px;
 }
 
 .phone {
@@ -484,8 +492,8 @@ a.copyright:active {
 }
 
 .slider-title {
+  margin-top: 275px;
   margin-bottom: 26px;
-  margin-top: 280px;
 
   font-size: 60px;
   line-height: 60px;
@@ -509,6 +517,7 @@ a.copyright:active {
   font-size: 32px;
   line-height: 44px;
 
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   border-radius: 50px;
 }
 
@@ -537,7 +546,7 @@ a.copyright:active {
 
 .banner-text {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 
   font-size: 18px;
   line-height: 22px;
@@ -590,7 +599,7 @@ a.copyright:active {
   position: relative;
 
   width: 267px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   margin-left: 26px;
 }
 
@@ -614,7 +623,7 @@ a.copyright:active {
   content: " ";
 
   position: absolute;
-  top: 1px;
+  top: 0px;
 
   width: 61px;
   height: 61px;
@@ -623,7 +632,6 @@ a.copyright:active {
   background-repeat: no-repeat;
 }
 
-
 .catalog-item img,
 .basket-table img {
   border-radius: 100%;
@@ -631,7 +639,7 @@ a.copyright:active {
 
 .catalog-item-cost {
   position: absolute;
-  bottom: 80px;
+  bottom: 72px;
 
   font-size: 45px;
   line-height: 1;
@@ -641,6 +649,10 @@ a.copyright:active {
 
 .catalog-item-cost:after {
   content: " ";
+
+  position: absolute;
+  top: 5px;
+  right: -35px;
 
   display: inline-block;
   width: 31px;
@@ -652,8 +664,8 @@ a.copyright:active {
 
 .catalog-item-weight {
   position: absolute;
-  bottom: 75px;
-  left: 110px;
+  bottom: 67px;
+  left: 113px;
 
   font-size: 30px;
   line-height: 45px;
@@ -663,6 +675,7 @@ a.copyright:active {
 
 .catalog-item-title {
   margin: 0;
+  margin-top: -6px;
 
   font-weight: 500;
   font-size: 16px;
@@ -677,7 +690,7 @@ a.copyright:active {
 
   width: 200px;
   margin: 0 auto;
-  padding: 12px 0;
+  margin: 11px 34px;
 }
 
 .catalog-item:hover .popup {
@@ -688,6 +701,8 @@ a.copyright:active {
 }
 
 .about-us {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   width: 1125px;
@@ -731,6 +746,10 @@ a.copyright:active {
 .about-us-ice-cream:before {
   content: " ";
 
+  position: absolute;
+  top: 93px;
+  left: 20px;
+
   display: block;
   width: 49px;
   height: 49px;
@@ -740,6 +759,10 @@ a.copyright:active {
 
 .about-us-cow:before {
   content: " ";
+
+  position: absolute;
+  top: 93px;
+  right: 512px;
 
   display: block;
   width: 49px;
@@ -751,6 +774,10 @@ a.copyright:active {
 .about-us-eco:before {
   content: " ";
 
+  position: absolute;
+  bottom: 77px;
+  left: 20px;
+
   display: block;
   width: 49px;
   height: 49px; 
@@ -761,6 +788,10 @@ a.copyright:active {
 .about-us-thermometer:before {
   content: " ";
 
+  position: absolute;
+  bottom: 77px;
+  right: 512px;
+
   display: block;
   width: 49px;
   height: 49px;
@@ -768,12 +799,22 @@ a.copyright:active {
   background-image: url("../img/thermometer.svg");
 }
 
-.about-us-text {
+.about-us-text-left,
+.about-us-text-right {
   font-weight: 400;
   color: #323232;
 
   width: 476px;
   margin: 0;
+}
+
+.about-us-text-left {
+  margin-left: 35px;
+}
+
+.about-us-text-right {
+  width: 470px;
+  margin-left: 18px;
 }
 
 .wrapper {
@@ -784,7 +825,7 @@ a.copyright:active {
 
 .blog {
   width: 540px;
-  min-height: 215px;
+  height: 215px;
   margin-left: 27px;
   padding-top: 5px;
   padding-left: 20px;
@@ -848,8 +889,8 @@ a.copyright:active {
 
 .feedback-contacts {
   position: absolute;
-  top: 62px;
-  right: 24px;
+  top: 64px;
+  right: 27px;
   z-index: 1;
 
   display: flex;
