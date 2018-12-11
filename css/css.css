@@ -538,7 +538,6 @@ a.copyright:active {
 }
 
 .slider-title {
-  width: 700px;
   margin-top: 275px;
   margin-bottom: 26px;
 
@@ -1088,12 +1087,9 @@ address {
   padding-bottom: 30px;
 }
 
-.footer-social {
-  width: 220px;
-}
-
 .social-list {
   display: flex;
+  width: 147px;
   margin: 0;
   margin-top: 30px;
   margin-left: 28px;
@@ -1200,11 +1196,12 @@ a.social-button-vk:active {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 337px;
+  align-items: flex-start;
+  width: 350px;
   height: 50px;
   margin: 0;
-  margin-top: 23px;
-  margin-left: 32px;
+  margin-top: 25px;
+  margin-left: 90px;
   padding: 0;
 
   list-style: none;
@@ -1218,12 +1215,17 @@ a.social-button-vk:active {
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
+.provider-footer-documents {
+  display: flex;
+  justify-content: space-around;
+}
+
 .provider-footer-documents:before {
   content: " ";
 
   position: absolute;
-  top: 6px;
-  left: -23px;
+  top: 3px;
+  left: -20px;
 
   width: 15px;
   height: 13px;
@@ -1237,8 +1239,8 @@ a.social-button-vk:active {
   flex-direction: column;
   width: 210px;
   margin: 0;
-  margin-top: 10px;
-  margin-right: 5px;
+  margin-top: 13px;
+  margin-right: 7px;
 }
 
 .footer-copyright a,
