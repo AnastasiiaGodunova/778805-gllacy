@@ -161,13 +161,31 @@ body {
   line-height: 16px;
 }
 
-.input-search {
+.search-form input {
   width: 311px;
   min-height: 44px;
   margin: 20px 15px;
-  padding-left: 15px;
+  padding: 13px 14px;
 
+  border: 1px solid #d3d3d2;
   border-radius: 5px;
+}
+
+.search-form input:hover {
+  width: 310px;
+  height: 14px;
+  padding-left: 13px;
+
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.search-form input:focus {
+  width: 310px;
+  height: 14px;
+  padding-left: 13px;
+  outline: 0;
+
+  border: 2px solid rgba(46, 136, 228, 0.52)
 }
 
 .section-search {
@@ -251,24 +269,30 @@ a.search:active {
   box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-input,
-textarea { 
-  padding: 13px 15px;
-
-  border: 1px solid rgba(178, 178, 178, 0.52);
-}
-
-input:hover,
-textarea:hover {
-  border: 2px solid rgba(154, 154, 154, 0.52)
-}
-
 .login-form input {
   width: 210px;
   margin-bottom: 20px;
+  padding: 13px 14px;
 
   border: 1px solid #d3d3d2;
   border-radius: 5px;
+}
+
+.login-form input:hover {
+  width: 208px;
+  height: 14px;
+  padding-left: 13px;
+
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.login-form input:focus {
+  width: 208px;
+  height: 14px;
+  padding-left: 13px;
+  outline: 0;
+
+  border: 2px solid rgba(46, 136, 228, 0.52)
 }
 
 .btn {
@@ -380,11 +404,12 @@ a.user-help-item {
 
 .basket-list {
   position: absolute;
-  top: 62px;
-  right: 100px;
+  top: 61px;
+  right: 102px;
   
-  width: 500px;
-  min-height: 220px;
+  display: none;
+  width: 502px;
+  min-height: 215px;
   padding: 13px 18px;
 
   font-weight: 400;
@@ -400,16 +425,36 @@ a.user-help-item {
 .modal-delete {
   width: 11px;
   height: 11px;
-
+  padding-right: 16px;
+  
   background-image: url("../img/cross-small.svg");
+  background-repeat: no-repeat;
 }
 
 .item-name {
   width: 225px;
+  min-height: 30px;
+  padding: 14px 9px;
+}
+
+.item-name p {
+  margin: 0;
+
+  vertical-align: bottom;
+}
+
+.weight-ice-cream {
+  padding-left: 11px;
 }
 
 .cost-a-kilo {
+  padding-right: 24px;
+
   color: #999999;
+}
+
+.sum-item {
+  width: 50px;
 }
 
 .total-sum {
@@ -426,6 +471,7 @@ a.user-help-item {
   position: absolute;
   right: 15px;
   bottom: 20px;
+
   width: 170px;
 }
 
@@ -864,11 +910,9 @@ a.copyright:active {
 
 .sub {
   width: 507px;
-  min-height: 197px;
+  min-height: 184px;
   margin: 4px 5px;
-  padding-top: 13px;
-  padding-right: 22px;
-  padding-left: 20px;
+  padding: 13px 21px;
   
   background-color: #f8f7f4;
   border-radius: 10px; 
@@ -881,9 +925,29 @@ a.copyright:active {
 
 .email-to-sub {
   width: 337px;
+  height: 16px;
   margin-top: 20px;
+  padding: 13px 14px;
 
+  border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 5px;
+}
+
+.email-to-sub:hover {
+  width: 336px;
+  height: 14px;
+  padding-left: 13px;
+
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.email-to-sub:focus {
+  width: 336px;
+  height: 14px;
+  padding-left: 13px;
+  outline: 0;
+
+  border: 2px solid rgba(46, 136, 228, 0.52)
 }
 
 .sub-button {
@@ -1186,12 +1250,9 @@ a.social-button-vk:active {
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
-.page-title {
-  margin: 0;
-  margin-left: 27px;
-
-  font-size: 35px;
-  line-height: 41px;
+.breadcrumbs-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .breadcrumbs {
@@ -1208,6 +1269,10 @@ a.social-button-vk:active {
   margin-top: 4px;
 }
 
+.breadcrumbs li {
+  margin-right: 7px;
+}
+
 .breadcrumbs a,
 .breadcrumbs-current {
   font-weight: 400;
@@ -1215,6 +1280,19 @@ a.social-button-vk:active {
   line-height: 16px;
   color: #ffffff;
   text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.page-title {
+  margin: 0;
+  margin-left: 27px;
+  margin-bottom: 27px;
+
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.filters {
+  margin-left: 14px;
 }
 
 .filter {
@@ -1231,6 +1309,22 @@ fieldset {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+}
+
+.sorting {
+  min-width: 194px;
+  height: 35px;
+  padding-left: 10px;
+
+  color: #ffffff;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.sorting:hover,
+.sorting:focus {
+  color: #323232;
 }
 
 .filter-sorting {
