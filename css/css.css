@@ -1484,15 +1484,16 @@ a.social-button-vk:active {
 
 .page-title {
   margin: 0;
+  margin-top: 1px;
+  margin-bottom: 26px;
   margin-left: 27px;
-  margin-bottom: 20px;
 
   font-size: 35px;
   line-height: 41px;
 }
 
 .filters {
-  margin-left: 14px;
+  padding-bottom: 25px;
 }
 
 .filter {
@@ -1501,7 +1502,11 @@ a.social-button-vk:active {
   width: 1200px;
 }
 
-fieldset {
+.fieldset {
+  margin: 0;
+  padding: 0;
+  padding-right: 13px;
+  padding-bottom: 15px;
   border: none;
 }
 
@@ -1515,14 +1520,15 @@ fieldset {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
 }
+
 .sorting:hover,
 .sorting:focus {
   color: #323232;
 }
 
 .sorting-name {
-  padding-top: 7px;
-  padding-left: 15px;
+  margin-bottom: 6px;
+  padding-left: 16px;
 
   font-weight: 500;
   font-size: 14px;
@@ -1531,10 +1537,55 @@ fieldset {
 
 .filter-sorting {
   width: 194px;
+  margin-left: 28px;
 }
 
 .filter-cost {
   width: 220px;
+}
+
+.range-controls {
+  position: relative;
+
+  padding: 17px 22px 16px 22px;
+  
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.range-controls .scale {
+  height: 4px;
+
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.range-controls .bar {
+  width: 49%;
+  height: 4px;
+
+  background: #f8f7f4;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 9px;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #f8f7f4;
+  background-color: #849d8f;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 35px;
+}
+
+.range-controls .toggle-max {
+  left: 133px;
 }
 
 .filter-fat {
@@ -1543,12 +1594,14 @@ fieldset {
 
 .filter-filler {
   width: 703px;
+  margin-left: 28px;
 }
 
-.filter-options {
+.filter-options-filler,
+.filter-options-fat {
   display: flex;
   margin: 0;
-  padding: 8px 0 8px 4px;  
+  padding: 7px 0 8px 4px;  
 
   list-style: none;
   
@@ -1556,7 +1609,11 @@ fieldset {
   border-radius: 20px;
 }
 
-.filter-options li {
+.filter-options-fat li {
+  padding-right: 6px;
+}
+
+.filter-options-filler li {
   padding-right: 12px;
 }
 
@@ -1603,6 +1660,7 @@ fieldset {
 .filter-submit {
   width: 144px;
   height: 34px;
+  margin-top: 23px;
   padding: 0;
 
   font-weight: 500;

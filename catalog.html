@@ -131,7 +131,7 @@
          <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-               <fieldset class="filter-sorting">
+               <fieldset class="fieldset filter-sorting">
                   <legend class="sorting-name"><label for="sorting">Сортировка:</label></legend>
                   <select class="sorting" name="sorting" id="sorting">
                      <option>по популярности</option>
@@ -140,13 +140,19 @@
                      <option>по жирности</option>
                   </select>
                </fieldset>
-               <fieldset class="filter-cost">
-                  <legend class="sorting-name"><label for="range-cost">Цена: 100 руб. - 500 руб.</label></legend>
-                  <input type="range" name="cost" id="range-cost" min="100" max="500">
+               <fieldset class="fieldset filter-cost">
+                  <legend class="sorting-name">Цена: 100 руб. — 500 руб.</legend>
+                  <div class="range-controls">
+                     <div class="scale">
+                        <div class="bar" style="margin-left: 25px"></div>
+                     </div>
+                     <div class="toggle toggle-min"></div>
+                     <div class="toggle toggle-max"></div>
+                  </div>
                </fieldset>
-               <fieldset class="filter-fat">
+               <fieldset class="fieldset filter-fat">
                   <legend class="sorting-name">Жирность:</legend>
-                  <ul class="filter-options">
+                  <ul class="filter-options-fat">
                      <li class="filter-option">
                         <label class="filter-input">
                            <input class="visually-hidden filter-input filter-input-radio" type="radio" name="fat">
@@ -177,9 +183,9 @@
                      </li>
                   </ul>               
                </fieldset>
-               <fieldset class="filter-filler">
+               <fieldset class="fieldset filter-filler">
                   <legend class="sorting-name">Наполнители:</legend>
-                  <ul class="filter-options">
+                  <ul class="filter-options-filler">
                      <li class="filter-option">
                         <label class="filter-input">
                            <input class="visually-hidden filter-input-checkbox" type="checkbox" name="filler" checked>
