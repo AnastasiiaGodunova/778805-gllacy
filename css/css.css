@@ -804,7 +804,10 @@ body {
 }
 
 .catalog-item-title {
-  max-width: 259px;
+  position: relative;
+  z-index: 5;
+
+  max-width: 260px;
   margin: 0;
   margin-top: -9px;
   margin-left: 4px;
@@ -827,6 +830,7 @@ body {
 
 .catalog-item:hover .popup {
   position: absolute;
+  bottom: -70px;
   z-index: 4;
 
   display: block;
@@ -1041,11 +1045,18 @@ body {
   position: relative;
 }
 
+.find-us iframe {
+  position: absolute;
+  z-index: 1;
+
+  border: none;
+}
+
 .feedback-contacts {
   position: absolute;
   top: 64px;
   right: 27px;
-  z-index: 1;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
@@ -1267,6 +1278,60 @@ body {
   height: 16px;
 
   background-image: url("../img/cross-big.svg");
+}
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.5s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-500px);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  70% {
+    transform: translateY(50px);
+  }
+
+  90% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
 }
 
 .map-pin {
@@ -1761,13 +1826,13 @@ a.social-button-vk:active {
   color: #ffffff;
 }
 
-.pagination-item a:hover,
-.pagination-item a:focus  {
+.pagination-item:not(.disabled) a:hover,
+.pagination-item:not(.disabled) a:focus  {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
 
-.pagination-item a:active,
+.pagination-item:not(.disabled) a:active,
 .pagination-item-current a {
   color: #323232;
 
