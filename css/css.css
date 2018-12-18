@@ -663,7 +663,7 @@ body {
   flex-direction: column;
   width: 520px;
   margin-bottom: 40px;
-  padding: 0 20px;
+  padding: 0 20px 24px 20px;
   
   border-radius: 15px;
 }
@@ -677,20 +677,21 @@ body {
 
 .banner-text {
   margin: 0;
-  margin-top: -2px;
-  margin-bottom: 18px;
+  margin-top: -1px;
+  margin-bottom: 17px;
 
   font-size: 18px;
   line-height: 22px;
 }
 
 .raspberries-free {
-  min-height: 229px;
+  min-height: 203px;
   margin-left: 27px;
 
   background-color: #661122;
   background-image: url("../img/banner-1.jpg");
   background-repeat: no-repeat;  
+  background-size: cover;
 }
 
 .button-banner-raspberries {
@@ -701,12 +702,13 @@ body {
 }
 
 .chocolate-free {
-  min-height: 229px;
+  min-height: 203px;
   margin-right: 27px;
 
   background-color: #452b1f;
   background-image: url("../img/banner-2.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .button-banner-chocolate {
@@ -769,7 +771,7 @@ body {
 
 .catalog-item-cost {
   position: absolute;
-  bottom: 70px;
+  top: 209px;
 
   font-size: 45px;
   line-height: 1;
@@ -788,13 +790,15 @@ body {
   width: 31px;
   height: 36px;
 
+  vertical-align: middle;
+
   background-image: url("../img/ruble.svg");
   background-repeat: no-repeat;
 }
 
 .catalog-item-weight {
   position: absolute;
-  bottom: 65px;
+  top: 213px;
   left: 113px;
 
   font-size: 30px;
@@ -984,6 +988,9 @@ body {
 }
 
 .new-article {
+  width: 281px;
+  margin: 0;
+
   font-size: 24px;
   line-height: 30px;
   color: #323232;
@@ -994,7 +1001,8 @@ body {
   min-height: 210px;
   margin-right: 27px;
 
-  background: url("../img/bg-post.svg") no-repeat;
+  background: #92cdff url("../img/bg-post.svg") no-repeat;
+  border-radius: 15px; 
 }
 
 .sub {
@@ -1024,12 +1032,12 @@ body {
 }
 
  .email-to-sub:hover {
-  padding-left: 13px;
+  padding: 12px 13px;
 
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
  .email-to-sub:focus {
-  padding-left: 13px;
+  padding: 12px 13px;
 
   outline: 0;
   border: 2px solid rgba(46, 136, 228, 0.52)
@@ -1043,6 +1051,11 @@ body {
 
 .find-us {
   position: relative;
+
+  height: 430px;
+  margin-bottom: 22px;
+
+  background-color: #ffffff;
 }
 
 .find-us iframe {
@@ -1055,14 +1068,14 @@ body {
 .feedback-contacts {
   position: absolute;
   top: 64px;
-  right: 27px;
+  right: 25px;
   z-index: 2;
 
   display: flex;
   flex-direction: column;
-  width: 252px;
+  width: 221px;
   min-height: 250px;
-  padding: 27px 25px;
+  padding: 27px 57px 27px 25px;
 
   background-color: #ffffff;
   border-radius: 15px;
@@ -1073,6 +1086,10 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #323232;
+}
+
+.fb-text-mini {
+  width: 150px;
 }
 
 .address {
@@ -1095,6 +1112,8 @@ body {
 }
 
 .feedback-text {
+  margin-bottom: 22px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -1361,7 +1380,7 @@ body {
 .social-list {
   display: flex;
   margin: 0;
-  margin-top: 28px;
+  margin-top: 13px;
   margin-left: 27px;
   padding: 0;
 
@@ -1469,7 +1488,7 @@ a.social-button-vk:active {
   width: 337px;
   height: 50px;
   margin: 0;
-  margin-top: 23px;
+  margin-top: 8px;
   margin-left: 31px;
   padding: 0;
 
@@ -1503,7 +1522,7 @@ a.social-button-vk:active {
   flex-direction: column;
   width: 210px;
   margin: 0;
-  margin-top: 10px;
+  margin-top: -5px;
   margin-right: 5px;
 }
 
@@ -1606,6 +1625,10 @@ a.social-button-vk:active {
 
   -webkit-appearance: none;
   -moz-appearance: none;
+}
+
+.sorting::-ms-expand {
+  display: none;
 }
 
 .sorting:hover,
