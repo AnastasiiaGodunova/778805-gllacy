@@ -1349,11 +1349,9 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-
-  margin-left: -227px;
-  margin-top: -20%;
-
   z-index: 25;
+
+  transform: translate(-50%, -50%); 
 
   display: none;
 
@@ -1493,28 +1491,28 @@ body {
 
 @keyframes bounce {
   0% {
-    -webkit-transform: translateY(-500px);
-    transform: translateY(-500px);
+    -webkit-transform: translateY(-500px) translateX(-50%);
+    transform: translateY(-500px) translateX(-50%);
   }
 
   50% {
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
+    -webkit-transform: translateY(30px) translateX(-50%);
+    transform: translateY(30px) translateX(-50%);
   }
 
   70% {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
+    -webkit-transform: translateY(50px) translateX(-50%);
+    transform: translateY(50px) translateX(-50%);
   }
 
   90% {
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px) translateX(-50%);
+    transform: translateY(-20px) translateX(-50%);
   }
 
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateY(0) translateX(-50%);
+    transform: translateY(0) translateX(-50%);
   }
 }
 
