@@ -2034,16 +2034,13 @@ a.social-button-vk:active {
 
 .filter-input input[type="radio"] + .radio-indicator:hover,
 .filter-input input[type="radio"] + .radio-indicator:focus,
-.filter-input input[type="radio"]:checked + .radio-indicator:hover,
-.filter-input input[type="radio"]:checked + .radio-indicator:focus,
 .filter-input input[type="checkbox"] + .checkbox-indicator:hover,
-.filter-input input[type="checkbox"] + .checkbox-indicator:focus,
-.filter-input input[type="checkbox"]:checked + .checkbox-indicator:hover,
-.filter-input input[type="checkbox"]:checked + .checkbox-indicator:focus {
+.filter-input input[type="checkbox"] + .checkbox-indicator:focus {
   opacity: 1;
 }
 
-.filter-input:disabled {
+.filter-input input[type="radio"]:disabled + .radio-indicator,
+.filter-input input[type="checkbox"]:disabled + .checkbox-indicator {
   opacity: 0.4;
 }
 
